@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Buku</title>
+    <link rel="stylesheet" href="/css/output.css">
+</head>
+<body class="bg-gray-100">
+
+
+
+    <div class="min-h-screen flex flex-col justify-center items-center p-5">
+
+        <h1 class="text-2xl font-bold mb-5">
+            Tambah Buku
+        </h1>
+
+        <form action="/tambahbuku" method="POST"
+              class="bg-white p-5 rounded shadow w-full max-w-md">
+
+            <label>Judul Buku</label>
+            <input type="text" name="judulbuku" required
+                class="border p-2 w-full mb-3">
+
+            <label>Penulis</label>
+            <input type="text" name="penulis" required
+                class="border p-2 w-full mb-3">
+            <div>
+
+            <label class="block">Kategori</label>
+            <select name="kategori" id="kategori" class="border p-2 rounded">
+                <option value="novel">novel</option>
+                <option value="pelajaran">pelajaran</option>
+                <option value="komik">komik</option>
+                <option value="manhwa">manhwa</option>
+                <option value="doujin">doujin</option>
+            </select>
+
+            </div>
+
+            <label>Tahun Terbit</label>
+            <input type="date" name="tahunterbit"
+                class="border p-2 w-full mb-3">
+
+            <label>ISBN</label>
+            <input type="text" name="isbn"
+                class="border p-2 w-full mb-3">
+
+            <button type="submit"
+                class="bg-blue-500 text-white p-2 rounded">
+                Simpan Buku
+            </button>
+
+        </form>
+
+        <a href="/users"
+            class="inline-block mt-5 bg-gray-500 text-white p-2 rounded">
+            Kembali
+        </a>
+
+    </div>
+
+</body>
+</html>
